@@ -24,3 +24,91 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* CALENDAR CONTAINER */
+.react-datepicker {
+  border: none !important;
+  background: transparent;
+  font-family: inherit;
+  width: 100%;
+}
+
+/* HEADER (MONTH + NAV) */
+.react-datepicker__header {
+  background: transparent;
+  border-bottom: none;
+  padding-bottom: 10px;
+}
+
+.react-datepicker__current-month {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* DAY NAMES */
+.react-datepicker__day-name {
+  font-size: 12px;
+  color: #999;
+  font-weight: 600;
+}
+
+/* DAY BASE */
+.react-datepicker__day {
+  width: 2.6rem !important;
+  height: 2.6rem !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 999px; /* makes it pill/circle */
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+.react-datepicker__day:hover {
+  background-color: rgba(80, 72, 229, 0.1);
+}
+
+/* SELECTED */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #5048e5 !important;
+  color: #fff !important;
+}
+
+/* TODAY */
+.react-datepicker__day--today {
+  border: 1.5px solid #5048e5;
+}
+
+/* DISABLED (PAST) */
+.react-datepicker__day--disabled {
+  color: #d0d0d0 !important;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* STATUS COLORS (SUBTLE, NOT BLOCKY) */
+.react-datepicker__day.day-available:not(.react-datepicker__day--selected):not(.react-datepicker__day--disabled) {
+  color: #2e7d32;
+}
+
+.react-datepicker__day.day-partial:not(.react-datepicker__day--selected):not(.react-datepicker__day--disabled) {
+  color: #ef6c00;
+}
+
+.react-datepicker__day.day-full:not(.react-datepicker__day--selected):not(.react-datepicker__day--disabled) {
+  color: #c62828;
+  text-decoration: line-through;
+}
+
+/* REMOVE BIG BLOCK BACKGROUNDS (clean look) */
+.react-datepicker__day.day-available,
+.react-datepicker__day.day-partial,
+.react-datepicker__day.day-full {
+  background: transparent !important;
+}
